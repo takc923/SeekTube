@@ -1,0 +1,12 @@
+{
+  "name": "SeekTube",
+  "description": "Forward/Backward 1 sec on YouTube videos",
+  "version": "0.1",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
