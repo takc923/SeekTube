@@ -7,18 +7,13 @@ document.addEventListener("keydown", (evt) =>{
     return
   }
   if (evt.key === ';'){
-    forwards();
+    forwards(1);
   } else if (evt.key === 'h') {
-    backwards();
+    forwards(-1);
   }
 });
 
-function forwards() {
+function forwards(seconds) {
   let v = document.querySelector('video')
-  v.currentTime = v.currentTime + 1
-}
-
-function backwards() {
-  let v = document.querySelector('video')
-  v.currentTime = v.currentTime - 1
+  v.currentTime = v.currentTime + seconds
 }
