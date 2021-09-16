@@ -7,13 +7,13 @@ document.addEventListener("keydown", (evt) =>{
     return
   }
   if (evt.key === ';'){
-    forwards(1);
+    seekBy(1);
   } else if (evt.key === 'h') {
-    forwards(-1);
+    seekBy(-1);
   }
 });
 
-function forwards(seconds) {
+function seekBy(seconds) {
   let v = document.querySelector('video[src]')
   // todo: Handle the case the video is not found.
   v.currentTime = v.currentTime + seconds
