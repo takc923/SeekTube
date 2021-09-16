@@ -14,6 +14,7 @@ document.addEventListener("keydown", (evt) =>{
 });
 
 function forwards(seconds) {
-  let v = document.querySelector('video')
+  let v = document.querySelector('video[src]')
+  // todo: Handle the case the video is not found.
   v.currentTime = v.currentTime + seconds
 }
