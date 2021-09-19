@@ -1,9 +1,9 @@
-document.addEventListener("keydown", (evt) =>{
+document.addEventListener("keydown", (evt) => {
   let ae = document.activeElement
   if (ae.isContentEditable || ae.tagName === 'INPUT' || ae.tagName === 'TEXTAREA') {
     return
   }
-  if (evt.key === ';'){
+  if (evt.key === ';') {
     seekBy(1);
   } else if (evt.key === 'h') {
     seekBy(-1);
