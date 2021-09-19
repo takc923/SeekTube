@@ -15,5 +15,6 @@ document.addEventListener("keydown", (evt) =>{
 
 function seekBy(seconds) {
   let v = document.querySelector('video[src]')
+  if (!v) return
   v.currentTime = v.currentTime + seconds * v.playbackRate
 }
